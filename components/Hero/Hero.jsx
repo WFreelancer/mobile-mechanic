@@ -114,14 +114,6 @@ const Hero = () => {
 	const router = useRouter();
 	const { scrollY } = useScroll();
 	const yMotion = useMotionValue(0); // Начальное значение
-	const [isMobile, setIsMobile] = useState(false);
-
-	useEffect(() => {
-		const checkScreen = () => setIsMobile(window.innerWidth < 768);
-		checkScreen(); // при загрузке
-		window.addEventListener('resize', checkScreen);
-		return () => window.removeEventListener('resize', checkScreen);
-	}, []);
 
 	useEffect(() => {
 		const updateY = () => {
@@ -137,7 +129,7 @@ const Hero = () => {
 		<HeroWrapper>
 			<HeroImageWrapper>
 				<HeroImage style={{ y: yMotion }}>
-					<Image src={isMobile ? posterMobile : poster} fill priority alt="Hero Image" />
+					<Image src={poster} fill priority alt="Hero Image" />
 				</HeroImage>
 			</HeroImageWrapper>
 
