@@ -19,6 +19,9 @@ const HeroWrapper = styled.section`
 	justify-content: center;
 	align-items: center;
 	background-color: var(--bg-dark);
+	@media (max-width: 500px){
+		min-height: unset;
+	}
 `;
 
 const Content = styled(motion.div)`
