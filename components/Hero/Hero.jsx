@@ -139,9 +139,9 @@ const Hero = () => {
 				<Text variants={animationContent} custom={4}>
 					We provide quality car repair services and roadside assistance.
 				</Text>
-				<Notice variants={animationContent} custom={7}>
+				{/* <Notice variants={animationContent} custom={7}>
 					Your car must be in the garage — it's a requirement for the call.
-				</Notice>
+				</Notice> */}
 				<Actions>
 					<MButton borderRadius="25px" onClick={() => router.push('/service-and-repair')} blue magnetic variants={animationContent} custom={5}>
 						Our Services
