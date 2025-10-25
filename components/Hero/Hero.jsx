@@ -7,6 +7,7 @@ import { Title } from '../Title';
 import { MButton } from '../Button';
 import { animationContent } from '../../helpers/Animations';
 import poster from '../../public/car-1.avif';
+import posterMobile from '../../public/card-2.avif';
 
 const HeroWrapper = styled.section`
 	position: relative;
@@ -113,6 +114,14 @@ const Hero = () => {
 	const router = useRouter();
 	const { scrollY } = useScroll();
 	const yMotion = useMotionValue(0); // Начальное значение
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const checkScreen = () => setIsMobile(window.innerWidth < 768);
+		checkScreen(); // при загрузке
+		window.addEventListener('resize', checkScreen);
+		return () => window.removeEventListener('resize', checkScreen);
+	}, []);
 
 	useEffect(() => {
 		const updateY = () => {
@@ -128,7 +137,7 @@ const Hero = () => {
 		<HeroWrapper>
 			<HeroImageWrapper>
 				<HeroImage style={{ y: yMotion }}>
-					<Image src={poster} fill priority alt="Hero Image" />
+					<Image src={isMobile ? posterMobile : poster} fill priority alt="Hero Image" />
 				</HeroImage>
 			</HeroImageWrapper>
 
