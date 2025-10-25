@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://vancouver-mobile-mechanic.vercel.app/sitemap.xml
