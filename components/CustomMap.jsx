@@ -11,7 +11,7 @@ const DefaultIcon = L.icon({
 	shadowSize: [41, 41],
 });
 
-const position = [49.245430, -123.059146];
+const position = [49.253766, -123.039999];
 
 const CustomMap = () => {
 	return (
@@ -26,7 +26,7 @@ const CustomMap = () => {
 			{/* Маркер */}
 			<Marker position={position} icon={DefaultIcon}>
 				<Popup>
-					2262 E 28th Ave<br />
+					3058 E 18th Ave<br />
 					Backyard area
 				</Popup>
 			</Marker>

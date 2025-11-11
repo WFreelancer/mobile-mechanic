@@ -77,7 +77,7 @@ const ColumnSecond = styled(motion.div)`
 	display: grid;
 	
 	.lg-react-element {
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		grid-gap: 20px;
 		display: grid;
 	 }
@@ -86,7 +86,7 @@ const ColumnSecond = styled(motion.div)`
 	 .lg-react-element a {
 		display: block;
 		width: 100%;
-		height: 100%;
+		// height: 100%;
 		overflow: hidden;
 	 }
   
@@ -108,7 +108,7 @@ const CardsContentFooter = styled.div`
 const ImageWrapper = styled(motion.a)`
 	position: relative;
 	width: 100%;
-	height: 100%;
+	height: 60%;
 	
 	img {
 		width: 100%;
@@ -168,21 +168,36 @@ const Location = () => {
 								<p>
 									<strong>Our Address:</strong>
 								</p>
-								<p>Vancouver, BC, 2262 E 28th Ave (Backyard entrance)</p>
+								<p>Vancouver, BC, 3058 E 18th Ave (Backyard entrance)</p>
 								<p>
 									<strong>View on Maps:</strong>
 								</p>
 
-								<MButton href="https://maps.app.goo.gl/wypzYRKmhxNe3p83A" borderRadius="25px" dark magnetic variants={animationContent} custom={6}>
+								<MButton
+									href="https://maps.app.goo.gl/fyKcG8aL4RwW7dRx8"
+									borderRadius="25px"
+									dark
+									magnetic
+									variants={animationContent}
+									custom={6}
+								>
 									<SiGooglemaps size={24} />
 									<strong>Google Maps</strong>
 								</MButton>
 								<br />
 
-								<MButton href="https://maps.apple.com/?address=2262%20E%2028th%20Ave,%20%D0%92%D0%B0%D0%BD%D0%BA%D1%83%D0%B2%D0%B5%D1%80%20BC%20V5N%202Y2,%20%D0%9A%D0%B0%D0%BD%D0%B0%D0%B4%D0%B0&ll=49.245546,-123.059141&q=2262%20E%2028th%20Ave&t=m" borderRadius="25px" dark magnetic variants={animationContent} custom={6}>
+								<MButton
+									href="https://maps.apple.com/?address=3058%20E%2018th%20Ave,%20Ванкувер%20BC%20V5M%202P3,%20Канада&ll=49.255900,-123.036300&q=3058%20E%2018th%20Ave&t=m"
+									borderRadius="25px"
+									dark
+									magnetic
+									variants={animationContent}
+									custom={6}
+								>
 									<FaApple size={24} />
 									<strong>Apple Maps</strong>
 								</MButton>
+
 							</Column>
 							<ColumnSecond>
 								<LightGallery
@@ -190,8 +205,11 @@ const Location = () => {
 									speed={500}
 									plugins={[lgThumbnail, lgZoom]}
 								>
-									<ImageWrapper href="/location.png">
-										<img alt="Outside view" src="/location.png" />
+									<ImageWrapper href="/me.jpg">
+										<img alt="" src="/me.jpg" />
+									</ImageWrapper>
+									<ImageWrapper href="/me2.jpg">
+										<img alt="" src="/me2.jpg" />
 									</ImageWrapper>
 									{/* <ImageWrapper href="/location.png">
 										<img alt="Inside view" src="/location.png" />
